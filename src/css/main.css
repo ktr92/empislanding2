@@ -2680,7 +2680,7 @@ h2:before {
   display: inline-block;
   font-size: 42px;
   line-height: 100%;
-  background: linear-gradient(270deg, #1f46c9 0%, #1ebaff 100%);
+  background: linear-gradient(90deg, #0eb1f2 48.5%, #7ee426 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2701,7 +2701,7 @@ h2:before {
 }
 
 .stats__item:hover .stats__text {
-  background: linear-gradient(270deg, #1f46c9 0%, #1ebaff 100%);
+  background: linear-gradient(90deg, #0eb1f2 48.5%, #7ee426 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3018,7 +3018,7 @@ h2:before {
   margin-bottom: 8px;
   padding-left: 59px;
   min-height: 42px;
-  background-image: url('data:image/svg+xml,<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.2" cx="21" cy="21" r="20" stroke="%230EB1F2" stroke-width="2" /><path fill-rule="evenodd" clip-rule="evenodd" d="M19.1293 22.095L25.2352 15L28 17.1789L19.5481 27L14 22.3545L16.3586 19.7751L19.1293 22.095Z" fill="%230EB1F2" /></svg>');
+  background-image: url('data:image/svg+xml,<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.3" cx="21" cy="21" r="20" stroke="%237EE426" stroke-width="2"/><path fill-rule="evenodd" clip-rule="evenodd" d="M19.1293 22.095L25.2352 15L28 17.1789L19.5481 27L14 22.3545L16.3586 19.7751L19.1293 22.095Z" fill="%230EB1F2"/></svg>');
   background-position: left top;
   background-repeat: no-repeat;
   padding-top: 9px;
@@ -3120,7 +3120,7 @@ h2:before {
   font-weight: 700;
   font-size: 42px;
   line-height: 100%;
-  background: linear-gradient(270deg, #1f46c9 0%, #1ebaff 100%);
+  background: linear-gradient(90deg, #0eb1f2 48.5%, #7ee426 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3263,7 +3263,7 @@ h2:before {
   padding-left: 48px;
 }
 .cards_3 .card:last-child .card__title {
-  background: linear-gradient(270deg, #1f46c9 0%, #1ebaff 100%);
+  background: linear-gradient(90deg, #0eb1f2 48.5%, #7ee426 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3537,7 +3537,7 @@ h2:before {
   margin-bottom: 8px;
 }
 .card__button .btn_main {
-  background: #0eb1f2;
+  background: #0eb1f2, linear-gradient(90deg, #0eb1f2 0%, #7ee426 100%), linear-gradient(90deg, #0eb1f2 48.5%, #7ee426 100%);
 }
 
 dt {
@@ -5274,6 +5274,25 @@ color: #fff;
   border: none;
 }
 @media (max-width: 1023px) {
+  .heroblock__flex  {
+    margin-bottom: 15px;
+  }
+  .heroblock__button a.btn_icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .heroblock__list ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    padding-left: 55px;
+  }
+  .heroblock__titleimage {
+    text-align: center;
+  }
+  .phoneform__button {
+    text-align: center;
+  }
   .heroblock__text br {
     display: none;
   }
