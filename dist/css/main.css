@@ -1116,6 +1116,10 @@ textarea:focus {
   --orbit-deg-to-2: 390deg;
   --orbit-deg-inner-from-2: -30deg;
   --orbit-deg-inner-to-2: -390deg;
+  --orbit-deg-from-1: 100deg;
+  --orbit-deg-to-1: 460deg;
+  --orbit-deg-inner-from-1: -100deg;
+  --orbit-deg-inner-to-1: -460deg;
   --orbit-opacity-1: rgba(255, 255, 255, 0.5);
   --orbit-opacity-2: rgba(255, 255, 255, 0.4);
   --orbit-opacity-3: rgba(255, 255, 255, 0.3);
@@ -1238,11 +1242,15 @@ textarea:focus {
 .orbit:nth-child(1) .icon {
   --orbit-size: var(--orbit-size-1);
   /* Маленькая орбита */
-  --orbit-deg-from: var(--orbit-deg-from);
+  --orbit-deg-from: var(--orbit-deg-from-1);
   /* Большая орбита */
-  --orbit-deg-to: var(--orbit-deg-to);
+  --orbit-deg-to: var(--orbit-deg-to-1);
+  --orbit-deg-inner-from: var(--orbit-deg-inner-from-1);
+  --orbit-deg-inner-to: var(--orbit-deg-inner-to-1);
   /* Большая орбита */
   transform: translateY(-50%);
+  top: calc(50% - 22px);
+  left: calc(50% - 22px);
 }
 
 .orbit:nth-child(2) .icon {
@@ -1443,7 +1451,7 @@ textarea:focus {
 .path {
   stroke-dasharray: 2500;
   stroke-dashoffset: 1000;
-  animation: dash 2s linear;
+  animation: dash 4s linear;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   fill: none;
@@ -2392,9 +2400,9 @@ h1 {
 }
 
 .animPhone {
-  bottom: 0;
+  bottom: 2px;
   z-index: 2;
-  right: -8px;
+  right: 48px;
   position: relative;
 }
 
@@ -2433,7 +2441,7 @@ h1 {
   height: 985px;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 11;
 }
 
 .imagePhone {
@@ -4092,8 +4100,11 @@ dt {
     margin: 0;
   }
 }
-
+.heroblock__mobile {
+  display: none;
+}
 @media (max-width: 1023px) {
+
   .projects__wrapper {
     max-width: 767px;
     margin: auto !important;
@@ -4278,7 +4289,7 @@ dt {
     display: block;
   }
   #demo {
-    height: 850px;
+    height: 955px;
   }
   .footermain__tel {
     margin-bottom: 11px;
@@ -4453,11 +4464,36 @@ dt {
     color: #0a2540;
   }
   .imagePhone {
-    bottom: -120px;
+    bottom: 194px;
+    width: 340px;
   }
+  .heroblock__mobile {
+    padding: 0 16px;
+  }
+  .indexmain {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .indexmain__form {
+    width: 100%;
+  }
+/*   .indexmain__form {
+    order: -1;
+  } */
+  .heroblock__desktop {
+    display: none;
+  }
+  .heroblock__mobile {
+    display: block;
+  }
+
   .animPhone {
-    right: 0;
-    bottom: -60px;
+    right: 18px;
+    bottom: 72px;
+
+  }
+  .animPhone svg {
+    width: 310px;
   }
   .phoneform {
     top: 50px;
@@ -5197,23 +5233,25 @@ dt {
 
 @media (max-width: 767px) {
   h1,
-  .heroblock__text,
+/*   .heroblock__text,
   .heroblock__icon {
     text-align: center;
-  }
+  } */
   .heroblock__flex {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 0;
+ /*    flex-wrap: wrap; */
+/*     justify-content: center;
+ */    margin-bottom: 0;
   }
   .heroblock__icon {
-    margin-top: 20px;
-    width: 90px;
+    margin-top: 0px;
+    max-width: 70px;
+    min-width: 70px;
   }
   .heroblock__text {
-    order: -1;
+    padding-left: 10px;
+  /*   order: -1;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 0; */
   }
   .prices {
     padding-top: 60px;
@@ -5280,6 +5318,14 @@ color: #fff;
   .heroblock__button a.btn_icon {
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
+    padding: 16px 0;
+  }
+  .heroblock__list ul li {
+    background-size: 26px;
+    padding-left: 41px;
+    font-size: 14px;
+    margin-bottom: 13px;
   }
   .heroblock__list ul li {
     margin-bottom: 10px;
@@ -5288,7 +5334,24 @@ color: #fff;
     padding-left: 55px;
   }
   .heroblock__titleimage {
-    text-align: center;
+    text-align: left;
+    margin-bottom: 10px;
+    width: 131px;
+  }
+  .indexmain__form {
+    z-index: -1;
+  }
+  .heroblock__mobile {
+    margin-top: -180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    text-align: left;
+    font-size: 32px;
+  }
+  .animOrbit {
+    bottom: 90px;
   }
   .phoneform__button {
     text-align: center;
@@ -5297,7 +5360,10 @@ color: #fff;
     display: none;
   }
   .heroblock__text {
-    font-size: 15px;
-    padding-left: 0px;
+    font-size: 12px;
+    margin-bottom: 0;
   }
+.indexmain {
+  padding-bottom: 90px;
+}
 }
